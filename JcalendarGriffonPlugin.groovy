@@ -17,30 +17,58 @@
  */
 class JcalendarGriffonPlugin {
     // the plugin version
-    def version = "0.2"
+    String version = '0.3'
     // the version or versions of Griffon the plugin is designed for
-    def griffonVersion = '0.9.2 > *' 
+    String griffonVersion = '0.9.5 > *'
     // the other plugins this plugin depends on
-    def dependsOn = [:]
+    Map dependsOn = [swing: '0.9.5']
     // resources that are included in plugin packaging
-    def pluginIncludes = []
+    List pluginIncludes = []
     // the plugin license
-    def license = 'GNU LGPL 2.1'
+    String license = 'GNU LGPL 2.1'
     // Toolkit compatibility. No value means compatible with all
     // Valid values are: swing, javafx, swt, pivot, gtk
-    def toolkits = ['swing']
+    List toolkits = ['swing']
     // Platform compatibility. No value means compatible with all
     // Valid values are:
     // linux, linux64, windows, windows64, macosx, macosx64, solaris
-    def platforms = []
+    List platforms = []
+    // URL where documentation can be found
+    String documentation = ''
+    // URL where source can be found
+    String source = 'https://github.com/griffon/griffon-jcalendar-plugin'
 
-    def author = 'Andres Almiray'
-    def authorEmail = 'aalmiray@users.sourceforge.net'
-    def title = 'Date & Calendar support'
-    def description = '''
-Date & Calendar support
-http://www.toedter.com/en/jcalendar/
+    List authors = [
+        [
+            name: 'Andres Almiray',
+            email: 'aalmiray@yahoo.com'
+        ]
+    ]
+    String title = 'Date & Calendar support'
+    String description = '''
+Provides date & Calendar support via [JCalendar][1].
+
+Usage
+-----
+
+The following nodes will become available on a View script upon installing this plugin
+
+| *Node*        | *Type*                                  |
+| ------------- | --------------------------------------- |
+| calendar      | `com.toedter.calendar.JCalendar`        |
+| dateChooser   | `com.toedter.calendar.JDateChooser`     |
+| dayChooser    | `com.toedter.calendar.JDayChooser`      |
+| monthChooser  | `com.toedter.calendar.JMonthChooser`    |
+| yearChooser   | `com.toedter.calendar.JYearChooser`     |
+| localeChooser | `com.toedter.components.JLocaleChooser` |
+| spinField     | `com.toedter.components.JSpinField`     |
+
+All JCalendar beans are designed as proper Java Beans. Please refer to the [JCalendar API documentation][2] to know more about the 
+properties that can be set on these beans.
+
+[1]: http://jeuclid.sourceforge.net/index.html
+[2]: http://www.toedter.com/en/jcalendar/api/index.html
 '''
-
-    def documentation = 'http://griffon.codehaus.org/Jcalendar+Plugin'
 }
+
+
