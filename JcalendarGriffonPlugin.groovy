@@ -17,11 +17,11 @@
  */
 class JcalendarGriffonPlugin {
     // the plugin version
-    String version = '0.3'
+    String version = '1.0.0'
     // the version or versions of Griffon the plugin is designed for
-    String griffonVersion = '0.9.5 > *'
+    String griffonVersion = '1.0.0 > *'
     // the other plugins this plugin depends on
-    Map dependsOn = [swing: '0.9.5']
+    Map dependsOn = [swing: '1.0.0']
     // resources that are included in plugin packaging
     List pluginIncludes = []
     // the plugin license
@@ -70,5 +70,3 @@ properties that can be set on these beans.
 [2]: http://www.toedter.com/en/jcalendar/api/index.html
 '''
 }
-
-

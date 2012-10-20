@@ -25,7 +25,7 @@ import com.toedter.components.JSpinField
  * @author Andres Almiray
  */
 class JcalendarGriffonAddon {
-    def factories = [
+    Map factories = [
         calendar: JCalendar,
         dateChooser: JDateChooser,
         dayChooser: JDayChooser,
